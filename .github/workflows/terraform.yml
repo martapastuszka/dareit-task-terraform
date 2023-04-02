@@ -5,6 +5,11 @@ on:
     branches:
     - main
 
+on:
+  pull request:
+    branches:
+    - feat/add-bucket
+
 jobs:
   terraform:
     name: 'Terraform'
