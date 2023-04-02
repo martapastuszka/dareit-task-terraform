@@ -14,6 +14,15 @@ resource "google_compute_instance" "dareit-vm-ci" {
     }
   }
 
+  network_interface {
+    network = "default"
+
+    access_config {
+      // Ephemeral public IP
+    }
+  }
+}
+
 resource "random_id" "bucket_prefix" {
   byte_length = 8
 }
@@ -24,13 +33,4 @@ resource "google_storage_bucket" "static" {
   storage_class = "COLDLINE"
 
   uniform_bucket_level_access = true
-}
-
-  network_interface {
-    network = "default"
-
-    access_config {
-      // Ephemeral public IP
-    }
-  }
 }
