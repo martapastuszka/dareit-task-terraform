@@ -5,6 +5,8 @@ name: 'Terraform CI'
     #branches:
     #- main
 
+#action on pull request
+
 on:
   pull_request:
     branches:
