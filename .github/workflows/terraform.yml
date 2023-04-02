@@ -1,18 +1,16 @@
 name: 'Terraform CI'
 
-on:
-  push:
-    branches:
-    - main
-    - feat/add-bucket
-
+#on:
+  #push:
+    #branches:
+    #- main
 
 #action on pull request
 
 on:
   pull_request:
     branches:
-    - feat/add-bucket
+    - main
 
 jobs:
   terraform:
